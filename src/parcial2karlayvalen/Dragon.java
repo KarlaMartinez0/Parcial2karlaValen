@@ -1,14 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package parcial2karlayvalen;
 
-/**
- *
- * @author valentina
- */
-public class Dragon {
+
+public class Dragon extends Criatura {
     
+    public Dragon (String nombre,int salud, int fuerza ){
+         super(nombre, salud, fuerza);
+    }
+
+    @Override
+    public void atacar(Criatura objetivo) {
+        int daño = this.fuerza * 2;
+        objetivo.defender(daño);
+    }
+
+    @Override
+    public void defender(int daño) {
+        this.salud -= daño;
+    
+    }
 }
