@@ -20,8 +20,7 @@ public abstract class Criatura {
         public abstract void atacar (Criatura objetivo);
         public abstract void defender (int daño);
         
-        public boolean estaViva(){
-            return salud > 0;
-        }
+     
+        
 }
 

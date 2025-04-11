@@ -8,13 +8,13 @@ public class Mago extends Criatura {
 
     @Override
     public void atacar(Criatura objetivo) {
-        int daño = this.fuerza;
-        objetivo.defender(daño);
+           int daño =  objetivo.salud - this.fuerza;
+            System.out.print("Daño causado al " + objetivo +" \nes de " + daño + "\n" );
     }
 
     @Override
     public void defender(int daño) {
-        this.salud -= daño;
+        daño = this.salud++;
     }
 }
 
